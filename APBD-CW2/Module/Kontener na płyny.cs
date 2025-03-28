@@ -5,7 +5,7 @@ public class Kontener_na_płyny : Kontener, IHazardNotifier
     private static int _numer = 1;
     public bool Niebezpieczny { get; set; }
     
-    public Kontener_na_płyny(string typ, int numer, double maxŁadowność, 
+    public Kontener_na_płyny( double maxŁadowność, 
                             double wysokość, double wagaWłasna, double głębokość, bool niebezpieczny) : 
                             base("L", _numer++, maxŁadowność, wysokość, wagaWłasna, głębokość)
     {
@@ -28,5 +28,10 @@ public class Kontener_na_płyny : Kontener, IHazardNotifier
             NotifyHazrd($"Próba przekroczenia bezpiecznego wypełnienia kontenera {NumerSeryjny}");
         else
             MasaŁadunku += masa;
+    }
+
+    public override string ToString()
+    {
+        return base.ToString() + $" czy niebezpiecznny {Niebezpieczny}";
     }
 }

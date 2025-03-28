@@ -7,7 +7,7 @@ public class Kontener_chłodniczy : Kontener
     public double Temperatura { get; private set; }
     public double MinimalnaTemperatura { get; private set; }
     
-    public Kontener_chłodniczy(string typ, int numer, double maxŁadowność, double wysokość, double wagaWłasna,
+    public Kontener_chłodniczy( double maxŁadowność, double wysokość, double wagaWłasna,
                         double głębokość, string rodzajProduktu, double minimalnaTemperatura, double temperatura) : 
                         base("C", _numer++, maxŁadowność, wysokość, wagaWłasna, głębokość)
     {

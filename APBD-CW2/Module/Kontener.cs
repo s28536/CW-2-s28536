@@ -42,6 +42,11 @@ public abstract class Kontener
             MasaŁadunku += masa;
         }
     }
+
+    public override string ToString()
+    {
+        return $"Kontener {NumerSeryjny} o masie {WagaWłasna + MasaŁadunku}";
+    }
 }
 
 public class OverflillException : Exception
